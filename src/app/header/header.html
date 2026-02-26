@@ -1,0 +1,116 @@
+<section class="relative">
+    <header class=" flex justify-around h-20 py-5 items-center text-[#503217] font-sans">
+        <img src="logo.png" alt="" class="w-30 h-6">
+        <nav class="">
+            <ul class="md:flex gap-10 hidden">
+                <li><a class="hover:text-[#160D05] transition-all" href="">Home</a></li>
+                <li><a class="hover:text-[#160D05] transition-all" href="">Shop</a></li>
+                <li><a class="hover:text-[#160D05] transition-all" href="">About</a></li>
+                <li><a class="hover:text-[#160D05] transition-all" href="">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="flex gap-2 items-center">
+            <a (click)="toggleVisibilitySearch()" class="hover:text-[#160D05] transition-all cursor-pointer">
+                <mat-icon>search</mat-icon>
+            </a>
+            <a (click)="toggleVisibilityAside()" class="hover:text-[#160D05] transition-all cursor-pointer">
+                <mat-icon>shopping_cart</mat-icon>
+            </a>
+            <a (click)="toggleVisibilityMenu()" class="hover:text-[#160D05] transition-all md:hidden cursor-pointer">
+                <mat-icon>menu</mat-icon>
+            </a>
+        </div>
+    </header>
+    <section class="flex justify-end">
+        <aside [hidden]="!isVisibleAside" class="bg-[#EEEDE7] px-10 py-5 md:w-2/7 w-5/6 shadow-xl border-2 border-white absolute top-0 h-screen">
+            <div class="flex justify-between">
+                <a (click)="toggleVisibilityAside()" class="cursor-pointer">
+                    <mat-icon>arrow_back</mat-icon>
+                </a>
+                <h1>Shopping Cart</h1>
+                <a href="">
+                    <mat-icon>delete_forever</mat-icon>
+                </a>
+            </div>
+            <div class="bg-white flex justify-between py-5 px-3 rounded-md mt-10">
+                <img class="w-24 h-24 bg-[#]" src="products/bakhakh.png">
+                <div class="">
+                    <h1 class="mb-2">headphone G-110</h1>
+                    <br>
+                    <span class="text-[#503217]">Quantity: 1</span>
+                </div>
+                <div>
+                    <div>
+                        <a href="">
+                            <mat-icon style="color: #D3744A;font-size: 20px;">edit</mat-icon>
+                        </a>
+                        <a href="">
+                            <mat-icon style="color: #D3744A; font-size: 20px;">delete</mat-icon>
+                        </a>
+                    </div>
+                    <br>
+                    <h3 class="text-[#D3744A]">112.0$</h3>
+                </div>
+            </div>
+        </aside>
+    </section>
+    <section class="flex justify-end">
+        <aside [hidden]="!isVisibleSearch" class="bg-[#EEEDE7] px-10 py-5 md:w-2/7 w-5/6 shadow-xl border-2 border-white absolute top-0 h-screen">
+            <div class="flex justify-between gap-5 items-center">
+                <a (click)="toggleVisibilitySearch()" class="cursor-pointer">
+                    <mat-icon>cancel</mat-icon>
+                </a>
+                <div class="w-full relative">
+                    <input class="bg-white outline-none border rounded-lg px-5 pl-8 py-2 w-full border-gray-300" type="search" placeholder="Search for medical....">
+                    <mat-icon class="absolute left-2 top-2" style="color: gray;font-size: 20px;">search</mat-icon>
+                </div>
+            </div>
+            <div class="bg-white flex justify-between py-5 px-3 rounded-md mt-10">
+                <img class="w-24 h-24 bg-[#]" src="products/bakhakh.png">
+                <div class="">
+                    <h1 class="mb-2">headphone G-110</h1>
+                    <br>
+                    <span class="text-[#503217]">Quantity: 1</span>
+                </div>
+                <div>
+                    <div>
+                        <a href="">
+                            <mat-icon style="color: #D3744A;font-size: 20px;">edit</mat-icon>
+                        </a>
+                        <a href="">
+                            <mat-icon style="color: #D3744A; font-size: 20px;">delete</mat-icon>
+                        </a>
+                    </div>
+                    <br>
+                    <h3 class="text-[#D3744A]">112.0$</h3>
+                </div>
+            </div>
+        </aside>
+    </section>
+    <section class="flex justify-end">
+        <aside [hidden]="!isVisibleMenu" class="bg-[#EEEDE7] px-10 py-5 md:w-2/7 w-5/6 shadow-xl border-2 border-white absolute top-0 h-screen">
+            <div class="flex justify-between gap-5 items-center">
+                <a (click)="toggleVisibilityMenu()" class="cursor-pointer">
+                    <mat-icon>cancel</mat-icon>
+                </a>
+                <h1 class="font-medium">Menu</h1>
+            </div>
+            <div class="bg-white flex justify-center items-center py-5 gap-2 rounded-md mt-10 cursor-pointer" style="color: #503217;">
+                <mat-icon>home</mat-icon>
+                <a class="font-medium">Home</a>
+            </div>
+            <div class="bg-white flex justify-center items-center py-5 gap-2 rounded-md mt-10 cursor-pointer" style="color: #503217;">
+                <mat-icon>shopping_bag</mat-icon>
+                <a class="font-medium">Shop</a>
+            </div>
+            <div class="bg-white flex justify-center items-center py-5 gap-2 rounded-md mt-10 cursor-pointer" style="color: #503217;">
+                <mat-icon>article_person</mat-icon>
+                <a class="font-medium">About</a>
+            </div>
+            <div class="bg-white flex justify-center items-center py-5 gap-2 rounded-md mt-10 cursor-pointer" style="color: #503217;">
+                <mat-icon>support_agent</mat-icon>
+                <a class="font-medium">Contact</a>
+            </div>
+        </aside>
+    </section>
+</section>
